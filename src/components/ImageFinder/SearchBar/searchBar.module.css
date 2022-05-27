@@ -1,0 +1,9 @@
+.searchBar {
+    background-color: rgb(67, 82, 163);
+    min-height: 64px;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
