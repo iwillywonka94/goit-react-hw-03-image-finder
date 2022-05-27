@@ -28,8 +28,7 @@ class Modal extends Component {
     }
 
     render () {
-        const {close} = this
-        const {children} = this.props
+        const {children, close} = this.props
         return createPortal(
             <div className={style.overlay} onClick={close}>
                 <div className={style.modal}>
