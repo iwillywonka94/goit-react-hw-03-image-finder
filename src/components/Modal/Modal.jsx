@@ -16,7 +16,7 @@ class Modal extends Component {
         document.removeEventListener('keydown', this.closeModal)
     }
 
-    closeModal = (evt) => {
+    closeModal = evt => {
         const { close } = this.props
         if(evt.code === "Escape") {
             close();
@@ -28,9 +28,10 @@ class Modal extends Component {
     }
 
     render () {
-        const {children, close} = this.props
+        const {closeModal} = this
+        const {children} = this.props
         return createPortal(
-            <div className={style.overlay} onClick={close}>
+            <div className={style.overlay} onClick={closeModal}>
                 <div className={style.modal}>
                     {children}
                 </div>
